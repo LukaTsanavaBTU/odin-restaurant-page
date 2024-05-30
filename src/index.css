@@ -1,11 +1,18 @@
 :root {
     --system-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-family: var(--system-font);
+    --dark-blue: rgb(32, 44, 156);
+    --light-blue: rgb(61, 73, 187);
+    --dark-grey: rgb(80, 83, 94);
+    --home-image-width: 800px;
 }
 
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 nav {
@@ -21,6 +28,63 @@ nav {
         cursor: pointer;
         font-size: 2rem;
         font-family: var(--system-font);
-        color: rgb(32, 44, 156);
+        color: var(--dark-blue);
+    }
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-div-wrapper {
+    width: calc(var(--home-image-width) + 30px);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: var(--dark-blue);
+        margin: 0;
+    }
+    p {
+        color: var(--dark-grey);
+    }
+    img {
+        border-radius: 10px;
+        width: calc(var(--home-image-width)/2);
+    };
+    .home-buttons {
+        display: flex;
+        gap: 20px;
+    }
+    button {
+        width: 150px;
+        border: none;
+        background-color: var(--dark-blue);
+        border-radius: 20px;
+        cursor: pointer;
+        font-family: var(--system-font);
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 10px 5px;
+        &:first-child {
+            background-color: var(--dark-blue);
+            color: white;
+            &:hover {
+                background-color: rgb(58, 71, 184);
+            }
+        }
+        &:last-child {
+            background-color: rgb(208, 208, 211);
+            color: rgb(17, 16, 20);
+            &:hover {
+                background-color: rgb(231, 232, 235);
+            }
+        }
     }
 }
