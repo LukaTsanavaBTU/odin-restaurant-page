@@ -1,0 +1,26 @@
+:root {
+    --system-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--system-font);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    justify-content: space-between;
+    justify-items: center;
+    padding: 20px;
+    box-shadow: 0px 4px 15px -8px rgba(90,114,250,1);
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 2rem;
+        font-family: var(--system-font);
+        color: rgb(32, 44, 156);
+    }
+}
