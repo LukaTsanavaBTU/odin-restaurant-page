@@ -1,3 +1,5 @@
 import "./index.css";
+import drawHome from "./home";
 
-console.log("it work");
+const content = document.querySelector("#content");
+content.appendChild(drawHome());
