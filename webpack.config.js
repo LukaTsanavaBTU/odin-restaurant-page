@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { clear } = require('console');
 
 module.exports = {
   mode: 'development',
@@ -8,6 +9,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    clear: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -27,6 +29,10 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
     ],
   },
