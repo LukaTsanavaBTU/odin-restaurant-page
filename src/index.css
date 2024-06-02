@@ -88,3 +88,42 @@ nav {
         }
     }
 }
+
+.menu-wrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 50px;
+    div {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 50px;
+        border: 1px solid rgba(61, 74, 187, 0.247);
+        border-radius: 5px;
+    }
+    h2, p {
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--dark-blue);
+        padding-top: 20px;
+    }
+    p {
+        color: var(--dark-grey);
+    }
+    p:last-of-type {
+        color: var(--dark-blue);
+        padding-bottom: 20px;
+    }
+    img {
+        grid-row: 1 / -1;
+        height: 200px;
+        border-radius: 0 5px 5px 0;
+    }
+}
