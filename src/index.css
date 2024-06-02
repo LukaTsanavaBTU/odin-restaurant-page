@@ -30,6 +30,12 @@ nav {
         font-family: var(--system-font);
         color: var(--dark-blue);
     }
+    img {
+        margin-left: 100px;
+        width: 80px;
+        filter: brightness(0) saturate(100%) invert(26%) sepia(13%) saturate(7492%) hue-rotate(214deg) brightness(82%) contrast(114%);
+        justify-self: self-start;
+    }
 }
 
 #content {
